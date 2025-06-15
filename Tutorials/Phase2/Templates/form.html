@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Wine Quality Predictor</h2>
+    <form method="POST" action="/predict">
+      {% for i in range(13) %}
+        Feature {{i+1}}: <input type="text" name="f{{i}}"><br>
+      {% endfor %}
+      <input type="submit" value="Predict">
+    </form>
+    <h3>{{ result }}</h3>
+  </body>
+</html>
